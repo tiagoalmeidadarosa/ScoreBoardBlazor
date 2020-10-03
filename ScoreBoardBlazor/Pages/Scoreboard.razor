@@ -1,0 +1,65 @@
+﻿@page "/scoreboard"
+
+<h1>Scoreboard</h1>
+
+<table>
+    <tr>
+        <td>
+            <input class="inputScore" maxlength="2" value="@pointA" disabled="disabled" />
+        </td>
+        <td>
+            <input class="inputSet" maxlength="2" value="@setA" disabled="disabled" />
+            <input class="inputSet" maxlength="2" value="@setB" disabled="disabled" />
+        </td>
+        <td>
+            <input class="inputScore" maxlength="2" value="@pointB" disabled="disabled" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="buttonPoint" @onclick="DecreasePointA">-</button>
+            <button class="buttonPoint" @onclick="AddPointA">+</button>
+        </td>
+        <td>
+            <button @onclick="RestartGame">Reiniciar</button>
+        </td>
+        <td>
+            <button class="buttonPoint" @onclick="DecreasePointB">-</button>
+            <button class="buttonPoint" @onclick="AddPointB">+</button>
+        </td>
+    </tr>
+</table>
+
+@*<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>*@
+
+@code {
+    private int pointA = 0;
+    private int pointB = 0;
+    private int setA = 0;
+    private int setB = 0;
+
+    private void DecreasePointA()
+    {
+        pointA--;
+    }
+
+    private void AddPointA()
+    {
+        pointA++;
+    }
+
+    private void DecreasePointB()
+    {
+        pointB--;
+    }
+
+    private void AddPointB()
+    {
+        pointB++;
+    }
+
+    private void RestartGame()
+    {
+
+    }
+}
